@@ -314,7 +314,9 @@ def main(args):
 
   device = "cuda" if torch.cuda.is_available() else "cpu"
   pipe_inpaint = StableDiffusionInpaintPipeline.from_pretrained(
-         "/your-checkpoint-path/stable-diffusion-inpainting",
+         "runwayml/stable-diffusion-inpainting",
+          revision="fp16",
+          torch_dtype=torch.float16
       ).to(device)
 
   model = pipe_inpaint.text_encoder 
