@@ -28,7 +28,7 @@ to_pil = T.ToPILImage()
 from diffusers.pipelines.stable_diffusion import StableDiffusionSafetyChecker
 
 pipe_inpaint = StableDiffusionInpaintPipeline.from_pretrained(
-    "/u01/yangyijun/data/stable-diffusion-inpainting", # put your model path here
+    "runwayml/stable-diffusion-inpainting", # put your model path here
     revision="fp16",
     torch_dtype=torch.float16,
 )
